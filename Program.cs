@@ -14,7 +14,7 @@ namespace RedSismicaWinForms
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Cambiá aquí para crear un usuario y pasar el gestor:
-            Usuario analista = new Usuario("Analista Principal");
+            Usuario analistaEnSismos = new Usuario("Analista Principal");
             GestorRegistrarResultado gestor = new GestorRegistrarResultado(analista);
 
             Application.Run(new PantRegistrarResultado(gestor));
