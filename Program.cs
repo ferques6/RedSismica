@@ -1,0 +1,23 @@
+using System;
+using System.Windows.Forms;
+
+namespace RedSismicaWinForms
+{
+    static class Program
+    {
+        [STAThread]
+        static void Main()
+        {
+            
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            // Cambiá aquí para crear un usuario y pasar el gestor:
+            Usuario analista = new Usuario("Analista Principal");
+            GestorRegistrarResultado gestor = new GestorRegistrarResultado(analista);
+
+            Application.Run(new PantRegistrarResultado(gestor));
+        }
+    }
+}
