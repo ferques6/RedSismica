@@ -31,7 +31,7 @@ namespace RedSismicaWinForms
         {
             this.Text = "Registro de revisión manual de eventos sísmicos";
             this.Width = 930;
-            this.Height = 520;
+            this.Height = 550;
             this.BackColor = Color.WhiteSmoke;
 
             Font fuenteTitulo = new Font("Segoe UI", 16, FontStyle.Bold);

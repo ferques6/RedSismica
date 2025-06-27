@@ -8,8 +8,8 @@ namespace RedSismicaWinForms
         [STAThread]
         static void Main()
         {
-            
 
+            // Configuración de la aplicación
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
