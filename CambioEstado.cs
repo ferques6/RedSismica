@@ -7,7 +7,7 @@ namespace RedSismicaWinForms
         private DateTime fechaHoraInicio;
         private DateTime? fechaHoraFin;
         private Estado estado;
-        private Usuario usuario;
+        private Sesion sesion;
 
         public CambioEstado(DateTime inicio, DateTime? fin, Estado estado, Usuario usuario)
         {
