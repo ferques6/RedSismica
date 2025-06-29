@@ -29,8 +29,165 @@ namespace RedSismicaWinForms
 
         private void InicializarControles()
         {
-            // ... (todo el código de setup visual, igual que tu versión anterior) ...
-            // OMITIDO para brevedad, copiá el bloque tal como lo tenías arriba
+            this.Text = "Registro de revisión manual de eventos sísmicos";
+            this.Width = 930;
+            this.Height = 550;
+            this.BackColor = Color.WhiteSmoke;
+
+            Font fuenteTitulo = new Font("Segoe UI", 16, FontStyle.Bold);
+            Font fuenteNormal = new Font("Segoe UI", 11);
+
+            // Título principal
+            lblTitulo = new Label()
+            {
+                Text = "Registrar resultado de revisión manual",
+                Font = fuenteTitulo,
+                Left = 20,
+                Top = 10,
+                Width = 700,
+                ForeColor = Color.DarkSlateBlue
+            };
+
+            // Subtítulo eventos
+            lblSubEventos = new Label()
+            {
+                Text = "Eventos sísmicos auto detectados",
+                Font = fuenteNormal,
+                Left = 20,
+                Top = 60,
+                Width = 350
+            };
+
+            listBoxEventos = new ListBox()
+            {
+                Left = 20,
+                Top = 90,
+                Width = 370,
+                Height = 140,
+                Font = fuenteNormal,
+                BackColor = Color.White
+            };
+
+            btnSeleccionar = new Button()
+            {
+                Left = 410,
+                Top = 90,
+                Width = 140,
+                Height = 38,
+                Text = "Mostrar detalles",
+                Font = fuenteNormal,
+                BackColor = Color.FromArgb(100, 149, 237),
+                ForeColor = Color.White
+            };
+            btnSeleccionar.FlatStyle = FlatStyle.Flat;
+            btnSeleccionar.FlatAppearance.BorderSize = 0;
+            btnSeleccionar.Cursor = Cursors.Hand;
+            btnSeleccionar.Click += btnSeleccionar_Click;
+
+            // Detalles del evento
+            lblDetalles = new Label()
+            {
+                Text = "Detalle del evento seleccionado",
+                Font = fuenteNormal,
+                Left = 20,
+                Top = 240,
+                Width = 400
+            };
+
+            txtDetalles = new TextBox()
+            {
+                Left = 20,
+                Top = 270,
+                Width = 530,
+                Height = 90,
+                Multiline = true,
+                ReadOnly = true,
+                Font = fuenteNormal,
+                BackColor = Color.Gainsboro,
+                ScrollBars = ScrollBars.Vertical
+            };
+
+            // Series temporales
+            lblSeries = new Label()
+            {
+                Text = "Series temporales asociadas",
+                Font = fuenteNormal,
+                Left = 570,
+                Top = 60,
+                Width = 260
+            };
+
+            listBoxSeries = new ListBox()
+            {
+                Left = 570,
+                Top = 90,
+                Width = 320,
+                Height = 270,
+                Font = fuenteNormal,
+                BackColor = Color.White
+            };
+
+            // Acción
+            lblAccion = new Label()
+            {
+                Text = "Acción a realizar sobre el evento:",
+                Font = fuenteNormal,
+                Left = 20,
+                Top = 375,
+                Width = 260
+            };
+
+            comboAccion = new ComboBox()
+            {
+                Left = 20,
+                Top = 400,
+                Width = 230,
+                Font = fuenteNormal,
+                DropDownStyle = ComboBoxStyle.DropDownList
+            };
+            comboAccion.Items.AddRange(new string[] { "Confirmar", "Rechazar", "Solicitar revisión a experto" });
+            comboAccion.SelectedIndex = 0;
+
+            btnRegistrar = new Button()
+            {
+                Left = 270,
+                Top = 400,
+                Width = 170,
+                Height = 38,
+                Text = "Registrar resultado",
+                Font = fuenteNormal,
+                BackColor = Color.MediumSeaGreen,
+                ForeColor = Color.White
+            };
+            btnRegistrar.FlatStyle = FlatStyle.Flat;
+            btnRegistrar.FlatAppearance.BorderSize = 0;
+            btnRegistrar.Cursor = Cursors.Hand;
+            btnRegistrar.Click += btnRegistrar_Click;
+
+            // Mensaje de feedback
+            lblMensaje = new Label()
+            {
+                Left = 20,
+                Top = 450,
+                Width = 880,
+                Height = 28,
+                Font = fuenteNormal,
+                ForeColor = Color.DarkGreen
+            };
+
+            // Agrego los controles al formulario
+            this.Controls.Add(lblTitulo);
+            this.Controls.Add(lblSubEventos);
+            this.Controls.Add(listBoxEventos);
+            this.Controls.Add(btnSeleccionar);
+            this.Controls.Add(lblDetalles);
+            this.Controls.Add(txtDetalles);
+            this.Controls.Add(lblSeries);
+            this.Controls.Add(listBoxSeries);
+            this.Controls.Add(lblAccion);
+            this.Controls.Add(comboAccion);
+            this.Controls.Add(btnRegistrar);
+            this.Controls.Add(lblMensaje);
         }
 
         // === Métodos requeridos por el diagrama de clases/secuencia ===
