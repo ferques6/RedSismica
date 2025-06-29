@@ -18,11 +18,20 @@ namespace RedSismicaWinForms
 
         public List<EventoSismico> obtenerEventosSismicosAutoDetectados()
         {
-            return eventosSismicosAutoDetectados
-                .Where(ev => ev.obtenerEstadoActual().esAutoDetectado())
-                .OrderBy(ev => ev.getFechaHoraOcurrencia())
-                .ToList();
+            List<EventoSismico> listaAutoDetectados = new List<EventoSismico>();
+            foreach (var ev in eventosSismicosAutoDetectados)
+            {
+                // Verifico si el evento está en estado "Auto Detectado"
+                if (ev.esAutoDetectado())
+                {
+                    listaAutoDetectados.Add(ev);
+                }
+            }
+            // Ordeno la lista por fecha/hora de ocurrencia
+            listaAutoDetectados.Sort((a, b) => a.getFechaHoraOcurrencia().CompareTo(b.getFechaHoraOcurrencia()));
+            return listaAutoDetectados;
         }
+
 
         public void tomarSeleccionEvento(EventoSismico evento)
         {

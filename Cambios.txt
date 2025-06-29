@@ -1,0 +1,31 @@
+Cambios para pasarle a chatgpt (Clase codigo -> Clase Diagrama)
+
+Clases Ya revisadas:
+1-
+2-
+3-
+
+Clases Que Faltan:
+1-
+2-
+3-
+
+Cambios:
+1- EventoSismico.esAutoDetectado()
+2-
+3-
+
+Clase PantalllaRegistrarResultado.cs
+1- Fatla-> habilitarVentana()
+2- Fatla-> mostrarEventosOrdenados()
+3- Fatla-> pedirSeleccionEvento()
+4- Fatla-> mostrarDatosSismicos()
+5- Fatla-> mostrarOpcionModificarDatosEvSismico()
+6- Fatla-> pedirAccionConEvento()
+7- Fatla-> tomarAccionConEvento()
+8- Fatla-> tomarOpcionModificarDatosEvSismico()
+9- Fatla-> tomarOpcionVisualizarSismografo()
+10- Fatla-> tomarSeleccionEvento()
+11- Falta-> seleccionarRegistroResultadoRevisionManual()
+
+

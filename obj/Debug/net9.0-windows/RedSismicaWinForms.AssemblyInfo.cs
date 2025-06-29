@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RedSismicaWinForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c503306b553fb7de5df124003c9fba5469e9add5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+391dc4d17e9115941e43c4b8d70f7f1dea7adfc7")]
 [assembly: System.Reflection.AssemblyProductAttribute("RedSismicaWinForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RedSismicaWinForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

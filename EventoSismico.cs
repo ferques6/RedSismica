@@ -28,7 +28,12 @@ namespace RedSismicaWinForms
         }
 
         public DateTime getFechaHoraOcurrencia() => fechaHoraOcurrencia;
-        public Estado obtenerEstadoActual() => estadoActual;
+        public double getLatitudEpicentro() => latEpicentro;
+        public double getLongitudEpicentro() => longEpicentro;
+        public double getLongitudHipocentro() => longHipocentro;
+        public double getValorMagnitud() => magnitud;
+
+        public Estado esAutoDetectado() => estadoActual;
         public void agregarSerieTemporal(SerieTemporal st) => seriesTemporales.Add(st);
         public List<SerieTemporal> getSerieTemporal() => seriesTemporales;
 
