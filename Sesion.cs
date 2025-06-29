@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace RedSismicaWinForms
 {
@@ -15,3 +15,4 @@ namespace RedSismicaWinForms
         }
         public Usuario getUsuarioLogueado() => usuario;
     }
+}
